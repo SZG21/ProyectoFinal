@@ -1,0 +1,105 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(#8b9da9, #fff6e4);
+    box-shadow: inset 0 0 100px hsla(0, 0%, 0%, 0.3);
+    font-family: "Poppins", sans-serif;
+}
+
+body::before {
+    content: "";
+    position:absolute;
+    background: url(Imagenes/image-link-5.jpg);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    opacity: 0.3;
+    background-position: center center;
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position:absolute;
+    background: url(/img/show.png);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.container {
+    display: flex;
+    gap: 10px;
+    width: 1400px;
+    height: 700px;
+}
+
+.img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7) saturate(0.2) contrast(1) blur(2px);
+    border-radius: 20px;
+    transition: flex 0.3s, filter 0.3s;
+    overflow: hidden;
+    box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border: 1px solid #8b9da9;
+}
+
+.img:hover {
+    flex: 1.5;
+    filter: none;
+}
+
+.img span {
+    display:block;
+    width: 50%;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    letter-spacing: 1px;
+    font-weight: bold;
+    position:absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.5s;
+    text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3), 0px -4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.img:hover span {
+    bottom: 20px;
+}
+
+.img1 {
+    
+    background-image: url("Imagenes/image-link-1.jpg");
+}
+
+.img2 {
+    background-image: url("Imagenes/image-link-2.jpg");
+}
+
+.img3 {
+    background-image: url("Imagenes/image-link-3.jpg");
+}
+
+.img4 {
+    background-image: url("Imagenes/image-link-4.jpg");
+}
